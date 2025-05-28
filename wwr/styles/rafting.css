@@ -1,0 +1,91 @@
+/* 🎨 Step 1: Define your colors and fonts as variables */
+:root {
+  --primary-color: #0B3D91;
+  --secondary-color: #A9D6E5;
+  --accent1-color: #FFB703;
+  --accent2-color: #FB8500;
+
+  --heading-font: 'Bebas Neue', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* 🧹 Step 2: Reset box model and default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 📝 Step 3: Set global font and text color */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+}
+
+/* 📏 Step 4: Center and contain main layout width */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* 🔠 Step 5: Style headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* 📦 Step 6: Add spacing to content blocks */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* 🔗 Step 7: Remove underlines on social media icon links */
+.socialmedia a {
+  text-decoration: none;
+}
+
+/* 🖼️ Step 8: Style the hero section container */
+.hero {
+  position: relative;
+}
+
+/* 🖼️ Step 9: Make hero image fill the container */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 🏷️ Step 10: Style the main title over the image */
+h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+/* 📄 Step 11: Style the article overlay box */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  max-width: 300px;
+}
+
+/* 👤 Step 12: Style the image inside the article */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 10px;
+}
+.socialmedia img {
+  width: 32px;
+  height: 32px;
+}
