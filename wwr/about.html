@@ -3,65 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn more about our White Water Rafting company, our mission, and exciting adventures." />
-  <meta name="author" content="Your Name Here" />
+  <meta name="description" content="About Us - White Water Rafting Company" />
   <title>About Us | White Water Rafting</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet" />
-
-  <!-- Link to CSS -->
+  
+  <!--  Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 <body>
-
   <header>
-    <img src="images/logo.png" alt="White Water Rafting Logo" />
+    <img src="images/logo.png" alt="Rafting Site Logo" />
+    <h1>White Water Rafting</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
+    <!--  Hero Section -->
     <div class="hero">
       <img src="images/hero.webp" alt="Rafting Adventure" />
-      <h1>White Water Rafting Co.</h1>
+      <h1>White Water Rafting</h1>
       <article>
-        <img src="images/happy-client.webp" alt="Happy Client Smiling" />
-        <p>At White Water Rafting Co., our mission is to deliver thrilling outdoor adventures and lasting memories for every client. Whether you're a first-time paddler or 
-            a seasoned explorer, we strive to make every moment safe, exciting, and unforgettable. Our guides are trained professionals who love what they do, and it shows 
-            in every smile, laugh, and high-five. Join us for the adventure of a lifetime — where the river meets fun and friendship flows freely!</p>
+        <img src="images/guide.webp" alt="Rafting Guide" />
+        <p>Join us on an unforgettable journey led by expert guides who know every twist of the river!</p>
       </article>
     </div>
 
-    <section>
+    <!--  History Section -->
+    <section class="history">
       <h2>History</h2>
-      <p>Founded by river adventurers in 2005, our company has grown from one raft and a dream to a full team of thrill-seekers bringing joy to thousands every season.</p>
-      <p>Over the years, we've expanded our fleet, trained a world-class team, and built strong connections with nature lovers of all kinds. Our goal has always been 
-        the same — to provide safe, unforgettable, and joy-filled rafting experiences that bring people closer together and closer to the wild beauty of the river.</p>
+      <p>
+        White Water Rafting began with a dream to bring thrilling adventures to nature lovers.
+        Since our founding in 2005, we've grown from a small team to a full-service river adventure company,
+        guiding thousands through the most breathtaking rapids in the region.
+      </p>
     </section>
 
-    <section>
-      <h2>Adventure Awaits You!</h2>
-      <img src="images/rafting1.webp" alt="Rafting Action 1" />
-      <img src="images/rafting2.webp" alt="Rafting Action 2" />
-      <img src="images/rafting3.webp" alt="Rafting Action 3" />
-      <img src="images/rafting4.webp" alt="Rafting Action 4" />
-      <img src="images/rafting5.webp" alt="Rafting Action 5" />
+    <!--  Adventure Section -->
+    <section class="adventures">
+      <h2>Adventure Awaits You</h2>
+      <div class="gallery">
+        <figure>
+          <img src="images/rafting1.webp" alt="Los Dientes del Diablo" />
+          <figcaption>Los Dientes del Diablo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/rafting2.webp" alt="Big Mallard" />
+          <figcaption>Big Mallard</figcaption>
+        </figure>
+        <figure>
+          <img src="images/rafting3.webp" alt="Half Day Adventure" />
+          <figcaption>Half Day Adventure</figcaption>
+        </figure>
+        <figure>
+          <img src="images/rafting4.webp" alt="Rapid Rush" />
+          <figcaption>Rapid Rush</figcaption>
+        </figure>
+        <figure>
+          <img src="images/rafting5.webp" alt="Thunder Run" />
+          <figcaption>Thunder Run</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
+  <!--  Footer with student name -->
   <footer>
-    <p>&copy; 2025 White Water Rafting Co. | Kusasira Solomon</p>
-    <nav class="socialmedia">
-      <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook" /></a>
-      <a href="https://twitter'com"><img src="images/twitter.png" alt="Twitter" /></a>
-      <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram" /></a>
-    </nav>
+    <p>&copy; 2025 White Water Rafting Co. | Kusasira Solomoon</p>
+    <div class="social">
+      <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+    </div>
   </footer>
-
 </body>
 </html>

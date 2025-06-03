@@ -1,91 +1,227 @@
 /* 🎨 Step 1: Define your colors and fonts as variables */
+/* ✅ Root Variables */
 :root {
-  --primary-color: #0B3D91;
-  --secondary-color: #A9D6E5;
-  --accent1-color: #FFB703;
-  --accent2-color: #FB8500;
-
-  --heading-font: 'Bebas Neue', sans-serif;
-  --body-font: 'Open Sans', sans-serif;
+  --primary-color: #0e4d92;
+  --secondary-color: #ffffff;
+  --accent-color: #ff6600;
+  --text-color: #333333;
+  --background-color: #f9f9f9;
+  --font-main: 'Roboto', sans-serif;
+  --font-alt: 'Open Sans', sans-serif;
 }
 
-/* 🧹 Step 2: Reset box model and default spacing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 📝 Step 3: Set global font and text color */
 body {
-  font-family: var(--body-font);
-  color: var(--accent1-color);
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
 }
 
-/* 📏 Step 4: Center and contain main layout width */
-header, main, footer {
-  width: 840px;
-  margin: 0 auto;
+/* ✅ Header with Grid and Flex Nav */
+header {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
 }
 
-/* 🔠 Step 5: Style headings */
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+header img {
+  width: 60px;
+  height: auto;
+  grid-column: 1;
 }
 
-/* 📦 Step 6: Add spacing to content blocks */
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
+header h1 {
+  grid-column: 2;
+  font-size: 1.5rem;
 }
 
-/* 🔗 Step 7: Remove underlines on social media icon links */
-.socialmedia a {
+nav {
+  grid-column: 3;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+nav a.active {
+  color: var(--accent-color);
+}
+
+/* ✅ Hero Section */
+.hero {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 2;
+  color: white;
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 320px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.hero article img {
+  float: right;
+  width: 100px;
+  margin-left: 1rem;
+  border-radius: 5px;
+}
+
+/* ✅ History Section */
+.history {
+  padding: 2rem;
+  background-color: var(--secondary-color);
+}
+
+.history h2 {
+  font-family: var(--font-alt);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ✅ Adventures Section */
+.adventures {
+  padding: 2rem;
+}
+
+.adventures h2 {
+  font-family: var(--font-alt);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.gallery figure {
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.gallery figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+}
+
+/* ✅ Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer .social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+footer .social a {
+  margin-left: 1rem;
   text-decoration: none;
 }
 
-/* 🖼️ Step 8: Style the hero section container */
-.hero {
-  position: relative;
-}
-
-/* 🖼️ Step 9: Make hero image fill the container */
-.hero img {
-  display: block;
-  width: 100%;
+footer .social img {
+  width: 24px;
   height: auto;
+  vertical-align: middle;
 }
 
-/* 🏷️ Step 10: Style the main title over the image */
-h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
-  color: #fff;
-}
+/* ✅ Responsive Adjustments */
+@media (max-width: 600px) {
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-/* 📄 Step 11: Style the article overlay box */
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 12px;
-  max-width: 300px;
-}
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
 
-/* 👤 Step 12: Style the image inside the article */
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 10px;
-}
-.socialmedia img {
-  width: 32px;
-  height: 32px;
+  .hero h1,
+  .hero article {
+    position: static;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .social {
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }
